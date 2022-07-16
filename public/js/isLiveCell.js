@@ -1,5 +1,5 @@
-import { world } from "./index";
+import { world } from "./index.js";
 
-const isLiveCell = (positionX, positionY) => world[positionX][positionY];
+export const isLiveCell = (positionX, positionY) => world[positionX][positionY];
 
 export default isLiveCell;
