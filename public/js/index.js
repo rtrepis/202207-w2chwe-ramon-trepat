@@ -1,4 +1,6 @@
-import answerLiveCell from "./isLiveCell.js";
+import { isLiveCell } from "./utility/isLiveCell.js";
+import { neighboursAreLive } from "./utility/neighboursAreLive.js";
+import { newState } from "./utility/newState.js";
 
 export const world = [];
 
@@ -21,64 +23,69 @@ world[2][2] = false;
 const cellX = 1;
 const cellY = 1;
 
-// const answerLiveCell = (positionX, positionY) => world[positionX][positionY];
+// const isLiveCell = (positionX, positionY) => world[positionX][positionY];
 
-const neivorsAreLive = (positionX, positionY) => {
-  let countNeivorsAreLive = 0;
+/* 
 
-  if (answerLiveCell(positionX - 1, positionY - 1)) {
-    countNeivorsAreLive += 1;
+const neighboursAreLive = (positionX, positionY) => {
+  let countneighboursAreLive = 0;
+
+  if (isLiveCell(positionX - 1, positionY - 1)) {
+    countneighboursAreLive += 1;
   }
-  if (answerLiveCell(positionX, positionY - 1)) {
-    countNeivorsAreLive += 1;
+  if (isLiveCell(positionX, positionY - 1)) {
+    countneighboursAreLive += 1;
   }
-  if (answerLiveCell(positionX + 1, positionY - 1)) {
-    countNeivorsAreLive += 1;
+  if (isLiveCell(positionX + 1, positionY - 1)) {
+    countneighboursAreLive += 1;
   }
 
-  if (answerLiveCell(positionX - 1, positionY)) {
-    countNeivorsAreLive += 1;
+  if (isLiveCell(positionX - 1, positionY)) {
+    countneighboursAreLive += 1;
   }
-  // if (answerLiveCell(positionX, positionY)) {
-  //  countNeivorsAreLive += 1;
+  // if (isLiveCell(positionX, positionY)) {
+  //  countneighboursAreLive += 1;
   // }
-  if (answerLiveCell(positionX + 1, positionY)) {
-    countNeivorsAreLive += 1;
+  if (isLiveCell(positionX + 1, positionY)) {
+    countneighboursAreLive += 1;
   }
 
-  if (answerLiveCell(positionX - 1, positionY + 1)) {
-    countNeivorsAreLive += 1;
+  if (isLiveCell(positionX - 1, positionY + 1)) {
+    countneighboursAreLive += 1;
   }
-  if (answerLiveCell(positionX, positionY + 1)) {
-    countNeivorsAreLive += 1;
+  if (isLiveCell(positionX, positionY + 1)) {
+    countneighboursAreLive += 1;
   }
-  if (answerLiveCell(positionX + 1, positionY + 1)) {
-    countNeivorsAreLive += 1;
+  if (isLiveCell(positionX + 1, positionY + 1)) {
+    countneighboursAreLive += 1;
   }
-  return countNeivorsAreLive;
+  return countneighboursAreLive;
 };
+*/
 
+/*
 const isNewState = (positionX, positionY) => {
   if (
-    (answerLiveCell(positionX, positionY) &&
-      neivorsAreLive(positionX, positionY) === 2) ||
-    neivorsAreLive(positionX, positionY) === 3
+    (isLiveCell(positionX, positionY) &&
+      neighboursAreLive(positionX, positionY) === 2) ||
+    neighboursAreLive(positionX, positionY) === 3
   ) {
     return true;
   }
   if (
-    !answerLiveCell(positionX, positionY) &&
-    neivorsAreLive(positionX, positionY) === 3
+    !isLiveCell(positionX, positionY) &&
+    neighboursAreLive(positionX, positionY) === 3
   ) {
     return true;
   }
   return false;
 };
+*/
 
-console.log(answerLiveCell(cellX, cellY));
+console.log(isLiveCell(cellX, cellY));
 
-console.log(neivorsAreLive(cellX, cellY));
+console.log(neighboursAreLive(cellX, cellY));
 
-console.log(isNewState(cellX, cellY));
+console.log(newState(cellX, cellY));
 
 export default world;
