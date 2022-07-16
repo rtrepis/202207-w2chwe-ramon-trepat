@@ -1,0 +1,14 @@
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.container {
+  height: 100vh;
+}
+
+/*# sourceMappingURL=style.css.map */
