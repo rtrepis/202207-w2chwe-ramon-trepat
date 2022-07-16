@@ -1,8 +1,5 @@
-import world from "./index";
-import exportX from "./index";
-import exportY from "./.index";
+import { world } from "./index";
 
-const isLiveCell = (world, positionX, postitionY) =>
-  world[postitionX][positionY];
+const isLiveCell = (positionX, positionY) => world[positionX][positionY];
 
 export default isLiveCell;

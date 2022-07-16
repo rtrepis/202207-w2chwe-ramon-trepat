@@ -1,4 +1,4 @@
-// import isLiveCell from "./isLiveCell";
+import isLiveCell from "./isLiveCell";
 
 export const world = [];
 
@@ -21,7 +21,7 @@ world[2][2] = true;
 const cellX = 1;
 const cellY = 1;
 
-const isLiveCell = (positionX, positionY) => world[positionX][positionY];
+// const isLiveCell = (positionX, positionY) => world[positionX][positionY];
 
 const neivorsAreLive = (positionX, positionY) => {
   let countNeivorsAreLive = 0;
@@ -39,9 +39,9 @@ const neivorsAreLive = (positionX, positionY) => {
   if (isLiveCell(positionX - 1, positionY)) {
     countNeivorsAreLive += 1;
   }
-  if (isLiveCell(positionX, positionY)) {
-    countNeivorsAreLive += 1;
-  }
+  // if (isLiveCell(positionX, positionY)) {
+  //  countNeivorsAreLive += 1;
+  // }
   if (isLiveCell(positionX + 1, positionY)) {
     countNeivorsAreLive += 1;
   }
@@ -81,3 +81,5 @@ console.log(isLiveCell(cellX, cellY));
 console.log(neivorsAreLive(cellX, cellY));
 
 console.log(isNewState(cellX, cellY));
+
+export default world;
