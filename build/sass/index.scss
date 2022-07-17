@@ -7,6 +7,25 @@ h1 {
   font-size: 2rem;
 }
 
+.header,
+.foot {
+  text-align: center;
+}
+
 .container {
-  height: 100vh;
+  display: flex;
+  // height: 90vh;
+  justify-content: center;
+}
+
+.foot {
+  padding-top: 10px;
+}
+
+.false {
+  background-color: red;
+}
+
+.true {
+  background-color: green;
 }
