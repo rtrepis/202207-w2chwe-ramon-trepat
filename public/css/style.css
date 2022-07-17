@@ -7,8 +7,19 @@ h1 {
   font-size: 2rem;
 }
 
+.header,
+.foot {
+  text-align: center;
+}
+
 .container {
+  display: flex;
   height: 90% vh;
+  justify-content: center;
+}
+
+.foot {
+  padding-top: 10px;
 }
 
 .false {
