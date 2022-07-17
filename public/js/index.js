@@ -2,25 +2,17 @@
 // import { neighboursAreLive } from "./utility/neighboursAreLive.js";
 // import { newState } from "./utility/newState.js";
 import { printWorld } from "./utility/printWorld.js";
+import { makeWorld, world } from "./utility/makeWorld.js";
+import { nextDay } from "./utility/newDay.js";
 
-export const world = [];
+export const worldWidth = 3;
+export const worldHeight = 3;
 
-world[0] = [];
-world[1] = [];
-world[2] = [];
-
-world[0][0] = true;
-world[0][1] = false;
-world[0][2] = true;
-
-world[1][0] = false;
-world[1][1] = false;
-world[1][2] = false;
-
-world[2][0] = true;
-world[2][1] = false;
-world[2][2] = false;
+makeWorld(worldHeight, worldWidth);
 
 printWorld(world);
 
-export default world;
+setInterval(() => {
+  nextDay();
+  console.log(world);
+}, 1000);

@@ -1,5 +1,3 @@
-// import {world} from "../index.js"
-
 export const printWorld = (nextWorld) => {
   let worldHTML = `<table class="word-cells">`;
 
