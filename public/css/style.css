@@ -8,7 +8,15 @@ h1 {
 }
 
 .container {
-  height: 100vh;
+  height: 90% vh;
+}
+
+.false {
+  background-color: red;
+}
+
+.true {
+  background-color: green;
 }
 
 /*# sourceMappingURL=style.css.map */

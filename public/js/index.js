@@ -1,6 +1,7 @@
-import { isLiveCell } from "./utility/isLiveCell.js";
-import { neighboursAreLive } from "./utility/neighboursAreLive.js";
-import { newState } from "./utility/newState.js";
+// import { isLiveCell } from "./utility/isLiveCell.js";
+// import { neighboursAreLive } from "./utility/neighboursAreLive.js";
+// import { newState } from "./utility/newState.js";
+import { printWorld } from "./utility/printWorld.js";
 
 export const world = [];
 
@@ -20,8 +21,10 @@ world[2][0] = true;
 world[2][1] = false;
 world[2][2] = false;
 
-const cellX = 1;
-const cellY = 1;
+printWorld(world);
+
+// const cellX = 1;
+// const cellY = 1;
 
 // const isLiveCell = (positionX, positionY) => world[positionX][positionY];
 
@@ -82,10 +85,10 @@ const isNewState = (positionX, positionY) => {
 };
 */
 
-console.log(isLiveCell(cellX, cellY));
+// console.log(isLiveCell(cellX, cellY));
 
-console.log(neighboursAreLive(cellX, cellY));
+// console.log(neighboursAreLive(cellX, cellY));
 
-console.log(newState(cellX, cellY));
+// console.log(newState(cellX, cellY));
 
 export default world;
